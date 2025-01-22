@@ -122,17 +122,18 @@ header {
 
 /* #region main */
 main {
-    padding-top: 100px;
+
     background-color: var(--light-color);
     width: 100%;
 
     section {
         margin: auto;
         width: 70%;
-        padding-top: 1rem;
+        padding-top: 8rem;
     }
 
     section:first-child {
+
         width: 100%;
         background-color: var(--main-color);
     }
@@ -172,6 +173,8 @@ main {
                     /*place anchor icon */
                     bottom: 0;
                     left: 0;
+                    color: var(--dark-color);
+                    padding: 1rem;
                 }
             }
 
@@ -196,7 +199,21 @@ main {
 
 
     }
+
+    div#top-spacer {
+
+        background-color: var(--light-color);
+        padding: 10rem 0;
+
+        hr {
+            border: 0.5px solid rgba(211, 211, 211, 0.527);
+
+        }
+    }
+
 }
+
+
 
 /* #endregion main */
 
