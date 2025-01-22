@@ -1,5 +1,11 @@
+/* #region common */
+
 :root {
-    --color: rgb;
+    --light-color: #ffffff;
+    --dark-color: #000000;
+    --main-color: #b4d0e6;
+    --secondary-color: #0061fe;
+
 }
 
 * {
@@ -13,6 +19,17 @@
     display: flex;
 }
 
+.bttn {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 0.4rem 0.75rem;
+    margin: 1rem;
+}
+
+/* #endregion common */
+
+/* #region debug */
+
 .debug {
 
     * {
@@ -20,8 +37,6 @@
     }
 
     header {
-        height: 5rem;
-        padding: 0 1rem;
         width: 100%;
         background-color: red;
 
@@ -38,7 +53,9 @@
         width: 100%;
 
 
+
         section {
+
             margin: auto;
             width: 70%;
             height: 20rem;
@@ -64,3 +81,72 @@
         }
     }
 }
+
+/* #endregion debug */
+
+/* #region header */
+header {
+    background-color: var(--light-color);
+
+
+    width: 100%;
+
+
+    nav {
+
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        div.d-flex {
+            align-items: center;
+
+            a:first-child {
+                padding-top: 1.2rem;
+            }
+        }
+
+        div {
+
+            a {
+                text-decoration: none;
+                color: var(--dark-color);
+                font-weight: 400;
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+/* #endregion header */
+
+/* #region main */
+main {
+    background-color: var(--light-color);
+    width: 100%;
+
+    section {
+        margin: auto;
+        width: 70%;
+    }
+
+    #jumbotron {
+        width: 80%;
+    }
+
+}
+
+/* #endregion main */
+
+/* #region footer */
+footer {
+    background-color: var(--dark-color);
+    width: 100%;
+
+    section {
+        margin: auto;
+        width: 80%;
+    }
+}
+
+/* #endregion footer */
