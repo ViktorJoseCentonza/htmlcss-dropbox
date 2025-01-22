@@ -87,7 +87,7 @@
 /* #region header */
 header {
     background-color: var(--light-color);
-
+    position: fixed;
 
     width: 100%;
 
