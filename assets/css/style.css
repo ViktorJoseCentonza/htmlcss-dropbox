@@ -22,6 +22,7 @@
 .bttn {
     background-color: var(--secondary-color);
     color: var(--light-color);
+    text-decoration: none;
     padding: 0.4rem 0.75rem;
     margin: 1rem;
 }
@@ -58,7 +59,6 @@
 
             margin: auto;
             width: 70%;
-            height: 20rem;
             background-color: lightcoral;
         }
 
@@ -122,6 +122,7 @@ header {
 
 /* #region main */
 main {
+    padding-top: 100px;
     background-color: var(--light-color);
     width: 100%;
 
@@ -132,8 +133,31 @@ main {
 
     #jumbotron {
         width: 80%;
-    }
 
+
+
+        div {
+            width: 100%;
+
+            h1 {
+                font-size: 100px;
+                text-align: center;
+            }
+
+            div:first-child {
+                flex-grow: 1;
+            }
+
+            div {
+                flex-grow: 2;
+            }
+
+            div img {
+                height: 400px;
+            }
+        }
+
+    }
 }
 
 /* #endregion main */
