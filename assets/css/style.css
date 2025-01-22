@@ -129,33 +129,71 @@ main {
     section {
         margin: auto;
         width: 70%;
+        padding-top: 1rem;
+    }
+
+    section:first-child {
+        width: 100%;
+        background-color: var(--main-color);
     }
 
     #jumbotron {
-        width: 80%;
-
-
+        /*actual container of the jumbo*/
+        margin: auto;
+        background-color: var(--main-color);
+        width: 70%;
 
         div {
+            padding-top: 2rem;
+            /*clear space for fixed header*/
             width: 100%;
 
             h1 {
+                display: inline;
+                /*to align header to the left*/
                 font-size: 100px;
-                text-align: center;
             }
 
             div:first-child {
-                flex-grow: 1;
+                position: relative;
+                /*used to place icon later*/
+                width: 30%;
+                /*leave space for main image*/
+                flex-direction: column;
+
+                & * {
+                    width: fit-content;
+                    /*make sure items don't occupy full line*/
+                }
+
+                .icon-container {
+                    font-size: 50px;
+                    position: absolute;
+                    /*place anchor icon */
+                    bottom: 0;
+                    left: 0;
+                }
             }
 
             div {
-                flex-grow: 2;
+                width: 60%;
+                /*take space for image*/
+
+                a.bttn {
+                    margin-left: 0;
+                    /*align button to the left*/
+                }
             }
 
+
             div img {
-                height: 400px;
+                height: 500px;
+                /*image size*/
+                margin-bottom: -10%;
+                /*make image exit from container*/
             }
         }
+
 
     }
 }
