@@ -1,7 +1,8 @@
 /* #region common */
 
 :root {
-    --light-color: #ffffff;
+    --lighter-color: #ffffff;
+    --light-color: rgb(211, 211, 211);
     --dark-color: #000000;
     --main-color: #b4d0e6;
     --secondary-color: #0061fe;
@@ -76,7 +77,7 @@ body {
 
 .bttn {
     background-color: var(--secondary-color);
-    color: var(--light-color);
+    color: var(--lighter-color);
     text-decoration: none;
     padding: 0.4rem 0.75rem;
     margin: 1rem;
@@ -142,7 +143,7 @@ body {
 
 /* #region header */
 header {
-    background-color: var(--light-color);
+    background-color: var(--lighter-color);
     position: fixed;
     z-index: 2;
     width: 100%;
@@ -178,7 +179,7 @@ header {
 /* #region main */
 main {
 
-    background-color: var(--light-color);
+    background-color: var(--lighter-color);
     width: 100%;
 
     section {
@@ -245,18 +246,19 @@ main {
 
     div#top-spacer {
 
-        background-color: var(--light-color);
+        background-color: var(--lighter-color);
         padding: 10rem 0;
 
         hr {
-            border: 0.5px solid rgba(211, 211, 211, 0.527);
+            border: 0.5px solid var(--light-color);
 
         }
     }
 
     #paid-plans {
-        div {
-            width: 100%;
+
+        .row {
+            flex-wrap: wrap;
 
 
             .column {
@@ -264,13 +266,13 @@ main {
 
                 .column-head {
                     justify-content: center;
-                    border: 2px solid rgb(211, 211, 211);
-                    border-bottom: 1px solid rgb(211, 211, 211);
+                    border: 2px solid var(--light-color);
+                    border-bottom: 1px solid var(--light-color);
                     padding: 1rem;
                 }
 
                 .card {
-                    border: 2px solid rgb(211, 211, 211);
+                    border: 2px solid var(--light-color);
                     border-top: none;
                     padding: 1rem;
                     flex-direction: column;
@@ -289,7 +291,24 @@ main {
 
                     }
 
-                    .card-title {}
+                    .card-title {
+
+                        h2 {
+                            font-weight: 800;
+                            font-size: 40px;
+                        }
+
+                        span:first-of-type {
+                            font-weight: 800;
+
+                        }
+
+                        span:last-of-type {
+                            color: var(--light-color);
+
+                        }
+
+                    }
 
                     .card-trial {
                         a.bttn {
@@ -308,7 +327,7 @@ main {
                     hr {
                         margin-left: 1rem;
                         ;
-                        border-top: 0.5px solid rgb(211, 211, 211);
+                        border-top: 0.5px solid var(--light-color);
                     }
 
                     .card-info {}
