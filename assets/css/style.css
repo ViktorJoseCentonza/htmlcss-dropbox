@@ -80,10 +80,9 @@ body {
     color: var(--lighter-color);
     text-decoration: none;
     text-align: center;
+    height: fit-content;
     padding: 0.4rem 0.75rem;
     margin: 1rem;
-
-
 
 }
 
@@ -177,12 +176,18 @@ header {
         justify-content: space-between;
         align-items: center;
 
-        div.d-flex {
-            align-items: center;
+        div:first-child {
 
             a:first-child {
-                padding-top: 1.2rem;
+                padding: 0rem;
+                border: none;
+
+                img {
+                    padding: 2rem 2rem 0 2rem;
+
+                }
             }
+
         }
 
         div {
@@ -191,8 +196,21 @@ header {
                 text-decoration: none;
                 color: var(--dark-color);
                 font-weight: 400;
-                padding: 1rem;
+                padding: 2rem;
+                border: 2px solid transparent;
+                margin-bottom: -2px;
+
+                &.bttn {
+                    margin: 1.6rem 1rem 0rem 1rem;
+
+                }
             }
+
+            a:not(.bttn).hoverable:hover {
+                border-bottom: 2px solid var(--dark-color);
+            }
+
+
         }
     }
 }
@@ -341,7 +359,6 @@ main {
 
         hr {
             margin-left: 1rem;
-            ;
             border-top: 0.5px solid var(--light-color);
         }
 
