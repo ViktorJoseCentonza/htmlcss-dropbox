@@ -79,9 +79,10 @@ body {
     background-color: var(--secondary-color);
     color: var(--lighter-color);
     text-decoration: none;
+    text-align: center;
     padding: 0.4rem 0.75rem;
     margin: 1rem;
-    width: fit-content;
+
 }
 
 /* #endregion common */
@@ -195,7 +196,6 @@ main {
     }
 
     #jumbotron {
-        /*actual container of the jumbo*/
         margin: auto;
         background-color: var(--main-color);
         width: 70%;
@@ -229,7 +229,10 @@ main {
             div {
                 a.bttn {
                     margin-left: 0;
+
                     /*align button to the left*/
+
+                    width: fit-content;
                 }
             }
 
@@ -264,7 +267,7 @@ main {
             .column {
                 padding: 1rem;
 
-                .column-head {
+                .card-head {
                     justify-content: center;
                     border: 2px solid var(--light-color);
                     border-bottom: 1px solid var(--light-color);
@@ -310,6 +313,8 @@ main {
 
                     }
 
+                    .card-info {}
+
                     .card-trial {
                         a.bttn {
                             margin: 1rem 0;
@@ -330,11 +335,35 @@ main {
                         border-top: 0.5px solid var(--light-color);
                     }
 
-                    .card-info {}
+                    .card-foot {
 
+
+                        div {
+                            i {
+                                color: var(--secondary-color);
+                                width: fit-content;
+
+                            }
+
+                            div {
+                                display: inline;
+
+                            }
+                        }
+                    }
                 }
             }
 
+            .col-12 .card {
+
+                .card-title {
+
+                    div {
+                        justify-content: space-between;
+
+                    }
+                }
+            }
         }
 
         & row {
