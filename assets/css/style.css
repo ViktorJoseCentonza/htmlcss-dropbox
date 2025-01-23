@@ -83,6 +83,28 @@ body {
     padding: 0.4rem 0.75rem;
     margin: 1rem;
 
+
+
+}
+
+.bttn-secondary {
+    background-color: var(--lighter-color);
+    color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+}
+
+.left-align {
+    margin-left: 0;
+}
+
+
+.row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .column {
+        padding: 1rem;
+    }
 }
 
 /* #endregion common */
@@ -228,10 +250,6 @@ main {
 
             div {
                 a.bttn {
-                    margin-left: 0;
-
-                    /*align button to the left*/
-
                     width: fit-content;
                 }
             }
@@ -258,122 +276,200 @@ main {
         }
     }
 
-    #paid-plans {
 
-        .row {
-            flex-wrap: wrap;
+    .card-head {
+        justify-content: center;
+        border: 2px solid var(--light-color);
+        border-bottom: 1px solid var(--light-color);
+        padding: 1rem;
+    }
 
+    .card {
+        border: 2px solid var(--light-color);
+        border-top: none;
+        padding: 1rem;
+        flex-direction: column;
 
-            .column {
-                padding: 1rem;
+        & [class*=card] {
+            flex-direction: column;
+            padding: 1rem;
 
-                .card-head {
-                    justify-content: center;
-                    border: 2px solid var(--light-color);
-                    border-bottom: 1px solid var(--light-color);
-                    padding: 1rem;
-                }
-
-                .card {
-                    border: 2px solid var(--light-color);
-                    border-top: none;
-                    padding: 1rem;
-                    flex-direction: column;
-
-                    & [class*=card] {
-                        flex-direction: column;
-                        padding: 1rem;
-
-                        & *:not(.bttn) {
-                            padding: 1rem 0;
-                        }
-
-
-
-
-
-                    }
-
-                    .card-title {
-
-                        h2 {
-                            font-weight: 800;
-                            font-size: 40px;
-                        }
-
-                        span:first-of-type {
-                            font-weight: 800;
-
-                        }
-
-                        span:last-of-type {
-                            color: var(--light-color);
-
-                        }
-
-                    }
-
-                    .card-info {}
-
-                    .card-trial {
-                        a.bttn {
-                            margin: 1rem 0;
-                            width: 100%;
-                            text-align: center;
-
-
-                        }
-
-                        span {
-                            padding: 0;
-                        }
-                    }
-
-                    hr {
-                        margin-left: 1rem;
-                        ;
-                        border-top: 0.5px solid var(--light-color);
-                    }
-
-                    .card-foot {
-
-
-                        div {
-                            i {
-                                color: var(--secondary-color);
-                                width: fit-content;
-
-                            }
-
-                            div {
-                                display: inline;
-
-                            }
-                        }
-                    }
-                }
+            & *:not(.bttn) {
+                padding: 1rem 0;
             }
 
-            .col-12 .card {
 
-                .card-title {
 
-                    div {
-                        justify-content: space-between;
 
-                    }
-                }
+
+        }
+
+        .card-title {
+
+            h2 {
+                font-weight: 800;
+                font-size: 40px;
+            }
+
+            span:first-of-type {
+                font-weight: 800;
+
+            }
+
+            span:last-of-type {
+                color: var(--light-color);
+
+            }
+
+        }
+
+        /* .card-info {} not needed atm*/
+
+        .card-trial {
+            a.bttn {
+                margin: 1rem 0;
+                width: 100%;
+                text-align: center;
+
+
+            }
+
+            span {
+                padding: 0;
             }
         }
 
-        & row {
-            justify-content: space-between;
+        hr {
+            margin-left: 1rem;
+            ;
+            border-top: 0.5px solid var(--light-color);
+        }
 
+        .card-foot {
+
+
+            div {
+                i {
+                    color: var(--secondary-color);
+                    width: fit-content;
+
+                }
+
+                div {
+                    display: inline;
+
+                }
+            }
+        }
+    }
+}
+
+.col-12 {
+
+    .card-head {
+        font-size: larger;
+
+        & i {
+            padding-right: 0.5rem;
         }
     }
 
+    .card {
+
+
+
+        .card-title {
+
+            div {
+                justify-content: space-between;
+
+                h2:first-of-type {
+                    padding-top: 0;
+                }
+
+                /*first of type for specificity override*/
+                span:first-of-type {
+                    color: black;
+                }
+
+                p {
+                    font-size: larger;
+                }
+
+                a.bttn {
+                    padding: 1rem;
+                    height: fit-content;
+                }
+            }
+        }
+    }
 }
 
+
+#partner-with-us {
+
+    justify-content: space-between;
+
+    div {
+        padding: 1rem;
+
+
+    }
+
+    .img-container {
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .content-container {
+        padding: 4rem;
+
+        h2:first-child {
+            font-size: xx-large;
+            padding-bottom: 1rem;
+        }
+
+        p {
+            padding-bottom: 1rem;
+        }
+
+
+    }
+
+
+
+}
+
+#features {
+
+    .row {
+        .column {
+
+            img {
+                width: 100%;
+            }
+
+            h2 {
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}
+
+#find-out-more {
+    padding-bottom: 5rem;
+
+    &>* {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 50px;
+        padding-bottom: 3rem;
+    }
+}
 
 
 /* #endregion main */
@@ -382,10 +478,44 @@ main {
 footer {
     background-color: var(--dark-color);
     width: 100%;
+    padding: 3rem 0 1rem 0;
+
+    & * {
+        color: var(--lighter-color);
+    }
 
     section {
         margin: auto;
         width: 80%;
+        padding-bottom: 1rem;
+
+        /*column.d-flex for specificity*/
+
+        .column.d-flex {
+            flex-direction: column;
+            padding-bottom: 4rem;
+
+            & * {
+                padding-bottom: 1rem;
+            }
+
+
+            a {
+                text-decoration: none;
+
+            }
+        }
+
+        .separator {
+            width: 10%;
+
+            hr {
+                border-top: 1px solid;
+                padding-bottom: 2rem;
+            }
+        }
+
+
     }
 }
 
