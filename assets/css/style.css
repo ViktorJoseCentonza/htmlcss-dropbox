@@ -84,7 +84,7 @@ body {
     padding: 0.4rem 0.75rem;
     margin: 1rem;
 
-    &.hoverable:hover {
+    &:hover {
         filter: brightness(120%);
 
     }
@@ -98,7 +98,7 @@ body {
     color: var(--dark-color);
     border: 1px solid var(--dark-color);
 
-    &.hoverable:hover {
+    &:hover {
         filter: invert();
 
     }
@@ -218,9 +218,11 @@ header {
                 }
             }
 
-            a:not(.bttn).hoverable:hover {
+            a:not(.bttn, :first-child):hover {
                 border-bottom: 2px solid var(--dark-color);
             }
+
+
 
 
         }
@@ -298,7 +300,7 @@ main {
     div#top-spacer {
 
         background-color: var(--lighter-color);
-        padding: 10rem 0;
+        padding: 10rem 0 5rem 0;
 
         hr {
             border: 0.5px solid var(--light-color);
@@ -306,92 +308,117 @@ main {
         }
     }
 
-
-    .card-head {
-        justify-content: center;
-        border: 2px solid var(--light-color);
-        border-bottom: 1px solid var(--light-color);
-        padding: 1rem;
-    }
-
-    .card {
-        border: 2px solid var(--light-color);
-        border-top: none;
-        padding: 1rem;
-        flex-direction: column;
-
-        & [class*=card] {
-            flex-direction: column;
-            padding: 1rem;
-
-            & *:not(.bttn) {
-                padding: 1rem 0;
-            }
+    #paid-plans {
+        padding-top: 0;
 
 
 
-
-
-        }
-
-        .card-title {
+        .column {
 
             h2 {
-                font-weight: 800;
-                font-size: 40px;
+                font-size: 50px;
+                padding-bottom: 2rem;
             }
 
-            span:first-of-type {
-                font-weight: 800;
 
+
+            .card-head {
+                justify-content: center;
+                border: 2px solid var(--light-color);
+                border-bottom: 1px solid var(--light-color);
+                padding: 1rem;
             }
 
-            span:last-of-type {
-                color: var(--light-color);
+            .card {
+                border: 2px solid var(--light-color);
+                border-top: none;
+                padding: 1rem;
+                flex-direction: column;
 
-            }
+                & [class*=card] {
+                    flex-direction: column;
+                    padding: 1rem;
 
-        }
-
-        /* .card-info {} not needed atm*/
-
-        .card-trial {
-            a.bttn {
-                margin: 1rem 0;
-                width: 100%;
-                text-align: center;
-
-
-            }
-
-            span {
-                padding: 0;
-            }
-        }
-
-        hr {
-            margin-left: 1rem;
-            border-top: 0.5px solid var(--light-color);
-        }
-
-        .card-foot {
+                    & *:not(.bttn) {
+                        padding: 1rem 0;
+                    }
 
 
-            div {
-                i {
-                    color: var(--secondary-color);
-                    width: fit-content;
+
+
 
                 }
 
-                div {
-                    display: inline;
+                .card-title {
 
+                    h2 {
+                        font-weight: 800;
+                        font-size: 40px;
+                    }
+
+                    span:first-of-type {
+                        font-weight: 800;
+
+                    }
+
+                    span:last-of-type {
+                        color: var(--light-color);
+
+                    }
+
+                }
+
+                .card-info {
+                    div {
+                        i {
+                            height: 100px;
+                        }
+                    }
+
+                }
+
+                .card-trial {
+                    a.bttn {
+                        margin: 1rem 0;
+                        width: 100%;
+                        text-align: center;
+
+
+                    }
+
+                    span {
+                        padding: 0;
+                    }
+                }
+
+                hr {
+                    margin-left: 1rem;
+                    border-top: 0.5px solid var(--light-color);
+                }
+
+                .card-foot {
+
+
+                    div {
+                        i {
+                            color: var(--secondary-color);
+                            width: fit-content;
+
+                        }
+
+                        div {
+                            display: inline;
+
+                        }
+                    }
                 }
             }
         }
+
     }
+
 }
+
 
 .col-12 {
 
