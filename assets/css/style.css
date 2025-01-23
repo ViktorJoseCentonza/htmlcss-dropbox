@@ -84,12 +84,24 @@ body {
     padding: 0.4rem 0.75rem;
     margin: 1rem;
 
+    &.hoverable:hover {
+        filter: brightness(120%);
+
+    }
+
 }
+
+
 
 .bttn-secondary {
     background-color: var(--lighter-color);
     color: var(--dark-color);
     border: 1px solid var(--dark-color);
+
+    &.hoverable:hover {
+        filter: invert();
+
+    }
 }
 
 .left-align {
