@@ -218,9 +218,17 @@ header {
                 }
             }
 
+
+
             a:not(.bttn, :first-child):hover {
                 border-bottom: 2px solid var(--dark-color);
             }
+
+            &:last-child a:first-child:hover {
+                border-bottom: 2px solid var(--dark-color);
+            }
+
+
 
 
 
@@ -334,6 +342,7 @@ main {
                 border-top: none;
                 padding: 1rem;
                 flex-direction: column;
+                height: 95%;
 
                 & [class*=card] {
                     flex-direction: column;
@@ -368,11 +377,22 @@ main {
 
                 }
 
-                .card-info {
+                .card-info,
+                .card-foot {
+
                     div {
-                        i {
-                            height: 100px;
+                        display: flex;
+
+                        /*selector specificity*/
+                        i.fa-solid {
+                            width: calc(100% / 12);
+
                         }
+
+                        span {
+                            width: calc(100% /12 *11);
+                        }
+
                     }
 
                 }
@@ -443,9 +463,8 @@ main {
                     padding-top: 0;
                 }
 
-                /*first of type for specificity override*/
-                span:first-of-type {
-                    color: black;
+                div:nth-child(2) {
+                    font-weight: 600;
                 }
 
                 p {
@@ -502,6 +521,7 @@ main {
 
     .row {
         .column {
+            padding: 2rem;
 
             img {
                 width: 100%;
